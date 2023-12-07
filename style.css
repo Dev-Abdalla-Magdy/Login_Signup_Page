@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url(./background.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgba(227, 227, 227, 0.155);
+  backdrop-filter: blur(25px);
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(208, 208, 208, 0.5);
+  width: 768px;
+  min-height: 480px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.container h1 {
+  color: #fff;
+}
+
+.container button {
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 45px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: 0.4s ease;
+}
+
+.container button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.container form {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 40px;
+}
+
+.container input {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.container .form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.container .toggle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  border-radius: 230px 0 0 230px;
+  overflow: hidden;
+  z-index: 1000;
+  transition: all 0.5s ease-in-out;
+}
+
+.login,
+.register {
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.register {
+  width: 50%;
+  left: 50%;
+  display: none;
+}
+
+.login {
+  width: 50%;
+  right: 50%;
+  display: none;
+}
+
+.login.active,
+.register.active {
+  display: block;
+}
+
+.container form a {
+  color: #fff;
+  font-size: 16px;
+}
+
+.container .social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  transition: 0.4s ease;
+}
+
+.social-icons i {
+  font-size: 25px;
+}
+
+.social-icons a:hover {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.toggle-container {
+  background-color: #fff;
+}
+
+.toggle-container.active {
+  left: 0;
+  border-radius: 0 230px 230px 0;
+}
+
+.left {
+  display: none;
+}
+
+.right {
+  display: none;
+}
+
+.right.active,
+.left.active {
+  display: block;
+}
+
+.right,
+.left {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.toggle-container button,
+form button {
+  font-size: 16px;
+  border: 2px solid #000;
+}
